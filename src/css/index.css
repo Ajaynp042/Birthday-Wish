@@ -8,7 +8,7 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: "carter one", sans-serif;
+    font-family: "Carter One", sans-serif;
     font-weight: bold!important;
 }
 
@@ -406,13 +406,13 @@ html {
     left: -2em;
     top: -1em;
     opacity: 0;
-    animation: secondCanvasTextOne 500ms ease 1s 1 forwards
+    animation: secondCanvasTextOne 500ms ease 1s 1 forwards;
 }
 
 .second--canvas .content h2:nth-child(2) {
     transform: translateX(5em);
     opacity: 0;
-    animation: secondCanvasTextTwo 500ms ease 1.5s 1 forwards
+    animation: secondCanvasTextTwo 500ms ease 1.5s 1 forwards;
 }
 
 .second--canvas .content h2:nth-child(3) {
@@ -420,7 +420,7 @@ html {
     top: 1em;
     left: -2em;
     opacity: 0;
-    animation: secondCanvasTextThree 500ms ease 2s 1 forwards
+    animation: secondCanvasTextThree 500ms ease 2s 1 forwards;
 }
 
 .canvas--remove {
@@ -463,7 +463,7 @@ html {
         transform: rotate(0deg);
         left: 0;
         top: 0;
-        opacity: 1
+        opacity: 1;
     }
 }
 
@@ -489,7 +489,44 @@ html {
     }
     to {
         transform: translateX(0);
-        opacity: 1
+        opacity: 1;
+    }
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 1200px) {
+    .second--canvas .content {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 992px) {
+    .second--canvas .content {
+        font-size: 3em;
+    }
+    .second--canvas .content h2:nth-child(1),
+    .second--canvas .content h2:nth-child(2),
+    .second--canvas .content h2:nth-child(3) {
+        left: -1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .second--canvas .content {
+        font-size: 2em;
+    }
+    .second--canvas .content h2:nth-child(1),
+    .second--canvas .content h2:nth-child(2),
+    .second--canvas .content h2:nth-child(3) {
+        left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .second--canvas .content {
+        font-size: 1.5em;
     }
 }
 
@@ -566,7 +603,7 @@ html {
 
 .third--canvas::before {
     background: #f09e40;
-    animation-delay: 200ms
+    animation-delay: 200ms;
 }
 
 .third--canvas::after {
@@ -771,7 +808,7 @@ html {
 
 @keyframes thirdCanvasCenterLine {
     from {
-        width: 0
+        width: 0;
     }
     to {
         width: 100%;
@@ -784,5 +821,47 @@ html {
     }
     to {
         height: 200px;
+    }
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 1200px) {
+    .third--canvas .center--line h1 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 992px) {
+    .third--canvas .center--line h1 {
+        font-size: 2.5em;
+    }
+    .third--canvas .center--line img#bl--left,
+    .third--canvas .center--line img#bl--right {
+        left: 1em;
+        right: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .third--canvas .center--line h1 {
+        font-size: 2em;
+    }
+    .third--canvas>img#gf1,
+    .third--canvas>img#gf2,
+    .third--canvas>img#gf3 {
+        left: 30%;
+    }
+}
+
+@media (max-width: 576px) {
+    .third--canvas .center--line h1 {
+        font-size: 1.5em;
+    }
+    .third--canvas>img#gf1,
+    .third--canvas>img#gf2,
+    .third--canvas>img#gf3 {
+        left: 25%;
     }
 }
